@@ -274,3 +274,44 @@ document.getElementById('docSo').onclick = function docSo(){
   alert(ketQua);
 }
 // Bài 4: Tìm sinh viên xa trường nhất
+document.getElementById('btnTim').onclick = function SVGanNhat() {
+  //Đầu vào
+  let tenSV1 = document.getElementById('tenSV1').value;
+  let toaDoX1 = +document.getElementById('toaDoX1').value;
+  let toaDoY1 = +document.getElementById('toaDoY1').value;
+
+  let tenSV2 = document.getElementById('tenSV2').value;
+  let toaDoX2 = +document.getElementById('toaDoX2').value;
+  let toaDoY2 = +document.getElementById('toaDoY2').value;
+
+  let tenSV3 = document.getElementById('tenSV3').value;
+  let toaDoX3 = +document.getElementById('toaDoX3').value;
+  let toaDoY3 = +document.getElementById('toaDoY3').value;
+  
+  let toaDoXTruong = +document.getElementById('toaDoXTruong').value;
+  let toaDoYTruong = +document.getElementById('toaDoYTruong').value;
+
+
+  //Xử Lý
+  let d1 = Math.sqrt((toaDoXTruong - toaDoX1) * (toaDoXTruong - toaDoX1) + (toaDoYTruong - toaDoY1) * (toaDoYTruong - toaDoY1));
+  let d2 = Math.sqrt((toaDoXTruong - toaDoX2) * (toaDoXTruong - toaDoX2) + (toaDoYTruong - toaDoY2) * (toaDoYTruong - toaDoY2));
+  let d3 = Math.sqrt((toaDoXTruong - toaDoX3) * (toaDoXTruong - toaDoX3) + (toaDoYTruong - toaDoY3) * (toaDoYTruong - toaDoY3));
+  let dmax = 0;
+  let ketQua = "";
+
+  if(d1 > d2 && d1 > d3)
+  {
+    dmax = d1;
+    ketQua = "Sinh viên xa trường nhất: " + tenSV1 ;
+  }else if(d2 > d1 && d2 > d3)
+  {
+    dmax = d2;
+    ketQua = "Sinh viên xa trường nhất: " + tenSV2 ;
+  }else
+  {
+    dmax = d3;
+    ketQua = "Sinh viên xa trường nhất: " + tenSV3 ;
+  }
+
+  alert(ketQua);
+}
