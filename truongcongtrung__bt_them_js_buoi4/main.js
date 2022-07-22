@@ -312,6 +312,6 @@ document.getElementById('btnTim').onclick = function SVGanNhat() {
     dmax = d3;
     ketQua = "Sinh viên xa trường nhất: " + tenSV3 ;
   }
-
+//đầu ra:
   alert(ketQua);
 }
